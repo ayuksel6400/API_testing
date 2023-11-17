@@ -2,9 +2,13 @@ package testDatas;
 
 import org.json.JSONObject;
 
+import java.security.PublicKey;
+
 public class TestDataJSONPlace {
 
     public int okStatusKodu = 200;
+    public String contentType = "application/json; charset=utf-8";
+    public String connectionHeader= "keep-alive";
 
     public JSONObject expBodyOlusturJSON(){
         JSONObject expBody = new JSONObject();
@@ -17,4 +21,17 @@ public class TestDataJSONPlace {
                 "\nnam impedit esse");
         return expBody;
     }
+
+    public JSONObject reqDataOlusturJSON(){
+
+        JSONObject reqBody = new JSONObject();
+        reqBody.put("title","Ali");
+        reqBody.put("body","Merhaba");
+        reqBody.put("userId",10);
+        reqBody.put("id",70);
+
+        return reqBody;
+    }
+
+
 }
